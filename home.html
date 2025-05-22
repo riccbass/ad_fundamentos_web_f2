@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Mercado da esquina</title>
+
+    <!-- O Projeto da disciplina consiste na criação de uma plataforma online para um
+    minimercado, conforme abordado durante as aulas. -->
+
+    <!-- A plataforma online é um sistema web de comércio de produtos e serviços de um minimercado. Os produtos 
+    disponíveis estão divididos em 3 categorias: frutas e verduras, produtos alimentícios não perecíveis e
+    produtos de higiene e limpeza. O(A) aluno(a) tem a liberdade de escolher as opções de apresentação, 
+    desde que haja pelo menos dois produtos de cada categoria. Quanto aos serviços oferecidos pelo 
+    minimercado são: retirada no local ou tele-entrega. -->
+
+    <!-- A estrutura básica do seu sistema web, nesta etapa, deve conter: • 
+     Cabeçalho(header): com informações do minimercado, 
+     links de navegação para as páginas, etc... Obs.: Para desenvolver esta parte, consulte as Aula 1 a 5. •
+     Corpo das páginas (body): Visualização de dois produtos de cada uma das 3 categorias (foto, descrição, valor) 
+     e os serviços oferecidos pelo minimercado (descrição, valor). 
+     
+     Obs.: Para desenvolver esta parte, consulte as Aula 1 a 5. • Rodapé (footer): contendo informações legais de autoria,
+     contato, links de navegação, etc. Obs.: Para desenvolver esta parte, consulte as Aula 1 a 5. 
+     
+     ATENÇÃO: seu projeto deve ser estruturado com base nos requisitos de desenvolvimento do sistema para 
+     um minimercado listados abaixo. Os requisitos mínimos do sistema web de front-end são: 
+     visualização das categorias (produtos) com imagens, descrição e valor, 
+     além dos serviços (descrição, valor) disponíveis no minimercado. -->
+  </head>
+  <body>
+    <header>
+      <h1>Mercado da Esquina</h1>
+      <nav>
+        <ul>
+          <li><a href="/">Página inicial</a></li>
+          <li>
+            <a href="/historia">Conheça a nossa <strong>história</strong></a>
+          </li>
+          <li>
+            <a href="/midia">Saímos na <strong>mídia</strong></a>
+          </li>
+          <li><a href="/sobre">Sobre</a></li>
+        </ul>
+      </nav>
+    </header>
+    <hr />
+    <main>
+      <div id="produtos">
+        <h3>Produtos</h3>
+        <div id="hortifruti">
+          <!-- com o css nas próximas aulas não vai ficar tão "cru" -->
+          <h4>Frutas e Verduras</h4>
+          <div>
+            <h5>Maça</h5>
+            <img src="imgs\maca.jpg" alt="maça" width="100" height="100" />
+            <small>Deliciosa Maça</small>
+            <small><strong>R$5,00</strong> kg</small>
+          </div>
+          <div>
+            <h5>Kiwi</h5>
+            <img src="imgs\kiwi.jpeg" alt="kiwi" width="100" height="100" />
+            <small>Delicioso Kiwi</small>
+            <small><strong>R$6,00</strong> kg</small>
+          </div>
+          <div>
+            <h5>Uva</h5>
+            <img src="imgs\uva.jpeg" alt="uva" width="100" height="100" />
+            <small>Deliciosa Uva</small>
+            <small><strong>R$7,00</strong> kg</small>
+          </div>
+        </div>
+        <div id="alim_n_pere">
+          <h4>Alimentos não perecíveis</h4>
+          <div>
+            <h5>Arroz</h5>
+            <img src="imgs\arroz.jpeg" alt="arroz" width="100" height="100" />
+            <small>Delicioso Arroz</small>
+            <small><strong>R$5,00</strong> un</small>
+          </div>
+          <div>
+            <h5>Farinha</h5>
+            <img
+              src="imgs\farinha.jpeg"
+              alt="farinha"
+              width="100"
+              height="100"
+            />
+            <small>Deliciosa Farinha</small>
+            <small><strong>R$6,00</strong> un</small>
+          </div>
+          <div>
+            <h5>Sardinha</h5>
+            <img
+              src="imgs\sardinha.jpg"
+              alt="sardinha"
+              width="100"
+              height="100"
+            />
+            <small>Deliciosa Sardinha</small>
+            <small><strong>R$7,00</strong> un</small>
+          </div>
+        </div>
+        <div id="higi_limp">
+          <h4>Higiene e Limpeza</h4>
+          <div>
+            <h5>Escova de dentes</h5>
+            <img src="imgs\escova.png" alt="escova" width="100" height="100" />
+            <small>Escova durável</small>
+            <small><strong>R$5,00</strong> un.</small>
+          </div>
+          <div>
+            <h5>Shampoo</h5>
+            <img src="imgs\shampoo.jpg" alt="shampo" width="100" height="100" />
+            <small>Shampoo prático</small>
+            <small><strong>R$6,00</strong> un.</small>
+          </div>
+          <div>
+            <h5>Veja</h5>
+            <img src="imgs\veja.jpeg" alt="veja" width="100" height="100" />
+            <small>Veja multiuso</small>
+            <small><strong>R$7,00</strong> un.</small>
+          </div>
+        </div>
+      </div>
+      <div id="servicos">
+        <h3>Serviços</h3>
+        <div id="retirada">
+          <h5>Retirada</h5>
+          <small><strong>Gratuito</strong></small>
+        </div>
+        <div id="retirada">
+          <h5>Tele-Entrega</h5>
+          <small><strong>R$5,00</strong> a cada 10 km</small>
+        </div>
+      </div>
+    </main>
+    <hr />
+    <footer>
+      <nav>
+        <ul>
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li>
+            <a href="mailto:mercado@esquina.com?subject=Contato">Contato</a>
+          </li>
+          <li>
+            <a href="/faq"><abbr title="Perguntas frequentes">FAQ</abbr></a>
+          </li>
+          <!-- não é elemento da lista, mas pra não ficar deslocado -->
+          <address>Feito por Ricardo Bassanesi</address>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>
