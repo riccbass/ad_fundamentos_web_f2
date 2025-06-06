@@ -4,158 +4,133 @@
     <meta charset="UTF-8" />
     <title>Mercado da esquina</title>
 
-    <!-- O Projeto da disciplina consiste na criação de uma plataforma online para um
-    minimercado, conforme abordado durante as aulas. -->
+    <!-- css do bootsstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
 
-    <!-- A plataforma online é um sistema web de comércio de produtos e serviços de um minimercado. Os produtos 
-    disponíveis estão divididos em 3 categorias: frutas e verduras, produtos alimentícios não perecíveis e
-    produtos de higiene e limpeza. O(A) aluno(a) tem a liberdade de escolher as opções de apresentação, 
-    desde que haja pelo menos dois produtos de cada categoria. Quanto aos serviços oferecidos pelo 
-    minimercado são: retirada no local ou tele-entrega. -->
+    <style>
+      .titulo {
+        margin-left: 45px;
+      }
 
-    <!-- A estrutura básica do seu sistema web, nesta etapa, deve conter: • 
-     Cabeçalho(header): com informações do minimercado, 
-     links de navegação para as páginas, etc... Obs.: Para desenvolver esta parte, consulte as Aula 1 a 5. •
-     Corpo das páginas (body): Visualização de dois produtos de cada uma das 3 categorias (foto, descrição, valor) 
-     e os serviços oferecidos pelo minimercado (descrição, valor). 
-     
-     Obs.: Para desenvolver esta parte, consulte as Aula 1 a 5. • Rodapé (footer): contendo informações legais de autoria,
-     contato, links de navegação, etc. Obs.: Para desenvolver esta parte, consulte as Aula 1 a 5. 
-     
-     ATENÇÃO: seu projeto deve ser estruturado com base nos requisitos de desenvolvimento do sistema para 
-     um minimercado listados abaixo. Os requisitos mínimos do sistema web de front-end são: 
-     visualização das categorias (produtos) com imagens, descrição e valor, 
-     além dos serviços (descrição, valor) disponíveis no minimercado. -->
+      .categoria {
+        margin-left: 15px;
+      }
+
+      .card-rvb {
+        margin-right: 1rem;
+      }
+    </style>
+
+    <!-- js do boostrap -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <header>
-      <h1>Mercado da Esquina</h1>
-      <nav>
-        <ul>
-          <li><a href="/ad_fundamentos_web">Página inicial</a></li>
-          <li>
-            <a href="/ad_fundamentos_web/historia"
-              >Conheça a nossa <strong>história</strong></a
-            >
+    <!-- para ficar "grudado", o navbar tem que ficar fora do header -->
+    <nav
+      class="navbar sticky-top navbar-expand-lg navbar-light"
+      style="background-color: #e3f2fd"
+    >
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/ad_fundamentos_web">Página inicial</a>
           </li>
-          <li>
-            <a href="/ad_fundamentos_web/midia"
-              >Saímos na <strong>mídia</strong></a
-            >
+          <li class="nav-item">
+            <a class="nav-link" href="/ad_fundamentos_web/historia">
+              Conheça a nossa <strong>história</strong>
+            </a>
           </li>
-          <li><a href="/ad_fundamentos_web/sobre">Sobre</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ad_fundamentos_web/midia">
+              Saímos na <strong>mídia</strong>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/ad_fundamentos_web/sobre">Sobre</a>
+          </li>
         </ul>
-      </nav>
-    </header>
+      </div>
+    </nav>
+
+    <h1 class="text-center">Mercado da Esquina</h1>
+
     <hr />
     <main>
       <div id="produtos">
-        <h3>Produtos</h3>
+        <h3 class="titulo">Produtos</h3>
         <div id="hortifruti">
           <!-- com o css nas próximas aulas não vai ficar tão "cru" -->
-          <h4>Frutas e Verduras</h4>
-          <div>
-            <h5>Maça</h5>
-            <img src="imgs\maca.jpg" alt="maça" width="100" height="100" />
-            <small>Deliciosa Maça</small>
-            <small><strong>R$5,00</strong> kg</small>
+          <h4 class="titulo">Frutas e Verduras</h4>
+          <div class="container-fluid">
+            <div class="row categoria">
+              <!-- produto 1   -->
+              <div class="card card-rvb" style="width: 20rem">
+                <img
+                  class="card-img-top"
+                  src="imgs\maca.jpg"
+                  alt="maça"
+                  style="width: 20rem"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Maça</h5>
+                  <p class="card-text">Deliciosa maça</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">R$ 5,00 kg</li>
+                </ul>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item text-center">
+                    <form
+                      class="d-flex align-items-center justify-content-center gap-2"
+                    >
+                      <label for="qtdy" class="mb-0" style="margin-right: 10rem"
+                        >Qtd:</label
+                      >
+                      <input
+                        id="qtdy"
+                        type="number"
+                        name="quantidade"
+                        min="1"
+                        max="10"
+                        value="1"
+                        class="form-control w-25"
+                      />
+                      <!-- tamanho do input o w-25, 25% -->
+                    </form>
+                  </li>
+                </ul>
+
+                <div class="card-body">
+                  <a href="#" class="card-link">Adicionar ao carrinho</a>
+                </div>
+                <!-- fim do card -->
+              </div>
+              <!-- produto 1   -->
+
+              <!-- fim da linha -->
+            </div>
           </div>
-          <div>
-            <h5>Kiwi</h5>
-            <img src="imgs\kiwi.jpeg" alt="kiwi" width="100" height="100" />
-            <small>Delicioso Kiwi</small>
-            <small><strong>R$6,00</strong> kg</small>
-          </div>
-          <div>
-            <h5>Uva</h5>
-            <img src="imgs\uva.jpeg" alt="uva" width="100" height="100" />
-            <small>Deliciosa Uva</small>
-            <small><strong>R$7,00</strong> kg</small>
-          </div>
-        </div>
-        <div id="alim_n_pere">
-          <h4>Alimentos não perecíveis</h4>
-          <div>
-            <h5>Arroz</h5>
-            <img src="imgs\arroz.jpeg" alt="arroz" width="100" height="100" />
-            <small>Delicioso Arroz</small>
-            <small><strong>R$5,00</strong> un</small>
-          </div>
-          <div>
-            <h5>Farinha</h5>
-            <img
-              src="imgs\farinha.jpeg"
-              alt="farinha"
-              width="100"
-              height="100"
-            />
-            <small>Deliciosa Farinha</small>
-            <small><strong>R$6,00</strong> un</small>
-          </div>
-          <div>
-            <h5>Sardinha</h5>
-            <img
-              src="imgs\sardinha.jpg"
-              alt="sardinha"
-              width="100"
-              height="100"
-            />
-            <small>Deliciosa Sardinha</small>
-            <small><strong>R$7,00</strong> un</small>
-          </div>
-        </div>
-        <div id="higi_limp">
-          <h4>Higiene e Limpeza</h4>
-          <div>
-            <h5>Escova de dentes</h5>
-            <img src="imgs\escova.png" alt="escova" width="100" height="100" />
-            <small>Escova durável</small>
-            <small><strong>R$5,00</strong> un.</small>
-          </div>
-          <div>
-            <h5>Shampoo</h5>
-            <img src="imgs\shampoo.jpg" alt="shampo" width="100" height="100" />
-            <small>Shampoo prático</small>
-            <small><strong>R$6,00</strong> un.</small>
-          </div>
-          <div>
-            <h5>Veja</h5>
-            <img src="imgs\veja.jpeg" alt="veja" width="100" height="100" />
-            <small>Veja multiuso</small>
-            <small><strong>R$7,00</strong> un.</small>
-          </div>
-        </div>
-      </div>
-      <div id="servicos">
-        <h3>Serviços</h3>
-        <div id="retirada">
-          <h5>Retirada</h5>
-          <small><strong>Gratuito</strong></small>
-        </div>
-        <div id="retirada">
-          <h5>Tele-Entrega</h5>
-          <small><strong>R$5,00</strong> a cada 10 km</small>
         </div>
       </div>
     </main>
-    <hr />
-    <footer>
-      <nav>
-        <ul>
-          <li><a href="#produtos">Produtos</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li>
-            <a href="mailto:mercado@esquina.com?subject=Contato">Contato</a>
-          </li>
-          <li>
-            <a href="/ad_fundamentos_web/faq"
-              ><abbr title="Perguntas frequentes">FAQ</abbr></a
-            >
-          </li>
-          <!-- não é elemento da lista, mas pra não ficar deslocado -->
-          <address>Feito por Ricardo Bassanesi</address>
-        </ul>
-      </nav>
-    </footer>
   </body>
 </html>
