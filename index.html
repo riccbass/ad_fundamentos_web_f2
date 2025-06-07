@@ -14,15 +14,20 @@
 
     <style>
       .titulo {
-        margin-left: 45px;
+        margin-left: 1rem;
       }
 
-      .categoria {
-        margin-left: 15px;
+      .categoria-rvb {
+        margin-left: 1rem;
+        margin-top: 1rem;
       }
 
       .card-rvb {
         margin-right: 1rem;
+      }
+
+      .altura-rvb {
+        width: 17rem;
       }
     </style>
 
@@ -62,11 +67,21 @@
           <li class="nav-item">
             <a class="nav-link" href="/ad_fundamentos_web/midia">
               Saímos na <strong>mídia</strong>
+              <span class="badge badge-secondary">Novo</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/ad_fundamentos_web/sobre">Sobre</a>
           </li>
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          >
+            Launch demo modal
+          </button>
         </ul>
       </div>
     </nav>
@@ -77,18 +92,17 @@
     <main>
       <div id="produtos">
         <h3 class="titulo">Produtos</h3>
-        <div id="hortifruti">
-          <!-- com o css nas próximas aulas não vai ficar tão "cru" -->
-          <h4 class="titulo">Frutas e Verduras</h4>
+        <div id="hortifruti" class="categoria-rvb">
+          <h4>Frutas e Verduras</h4>
           <div class="container-fluid">
-            <div class="row categoria">
+            <div class="row">
               <!-- produto 1   -->
-              <div class="card card-rvb" style="width: 20rem">
+              <div class="card card-rvb altura-rvb">
                 <img
-                  class="card-img-top"
+                  class="card-img-top altura-rvb"
                   src="imgs\maca.jpg"
                   alt="maça"
-                  style="width: 20rem"
+                  style="height: 15rem"
                 />
                 <div class="card-body">
                   <h5 class="card-title">Maça</h5>
@@ -97,34 +111,132 @@
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item">R$ 5,00 kg</li>
                 </ul>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item text-center">
-                    <form
-                      class="d-flex align-items-center justify-content-center gap-2"
-                    >
-                      <label for="qtdy" class="mb-0" style="margin-right: 10rem"
-                        >Qtd:</label
-                      >
-                      <input
-                        id="qtdy"
-                        type="number"
-                        name="quantidade"
-                        min="1"
-                        max="10"
-                        value="1"
-                        class="form-control w-25"
-                      />
-                      <!-- tamanho do input o w-25, 25% -->
-                    </form>
-                  </li>
-                </ul>
+                <ul class="list-group list-group-flush"></ul>
 
                 <div class="card-body">
                   <a href="#" class="card-link">Adicionar ao carrinho</a>
                 </div>
                 <!-- fim do card -->
               </div>
+              <!-- produto 2   -->
+              <div class="card card-rvb altura-rvb">
+                <img
+                  class="card-img-top altura-rvb"
+                  src="imgs\maca.jpg"
+                  alt="maça"
+                  style="height: 15rem"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Maça</h5>
+                  <p class="card-text">Deliciosa maça</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">R$ 5,00 kg</li>
+                </ul>
+                <ul class="list-group list-group-flush"></ul>
+
+                <div class="card-body">
+                  <a href="#" class="card-link">Adicionar ao carrinho</a>
+                </div>
+                <!-- fim do card -->
+              </div>
+              <!-- produto 3   -->
+              <div class="card card-rvb altura-rvb">
+                <img
+                  class="card-img-top altura-rvb"
+                  src="imgs\maca.jpg"
+                  alt="maça"
+                  style="height: 15rem"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Maça</h5>
+                  <p class="card-text">Deliciosa maça</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">R$ 5,00 kg</li>
+                </ul>
+                <ul class="list-group list-group-flush"></ul>
+
+                <div class="card-body">
+                  <a href="#" class="card-link">Adicionar ao carrinho</a>
+                </div>
+                <!-- fim do card -->
+              </div>
+
+              <!-- fim da linha -->
+            </div>
+          </div>
+        </div>
+        <div id="limpeza" class="categoria-rvb">
+          <h4>Limpeza</h4>
+          <div class="container-fluid">
+            <div class="row">
               <!-- produto 1   -->
+              <div class="card card-rvb altura-rvb">
+                <img
+                  class="card-img-top altura-rvb"
+                  src="imgs\maca.jpg"
+                  alt="maça"
+                  style="height: 15rem"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Maça</h5>
+                  <p class="card-text">Deliciosa maça</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">R$ 5,00 kg</li>
+                </ul>
+                <ul class="list-group list-group-flush"></ul>
+
+                <div class="card-body">
+                  <a href="#" class="card-link">Adicionar ao carrinho</a>
+                </div>
+                <!-- fim do card -->
+              </div>
+              <!-- produto 2   -->
+              <div class="card card-rvb altura-rvb">
+                <img
+                  class="card-img-top altura-rvb"
+                  src="imgs\maca.jpg"
+                  alt="maça"
+                  style="height: 15rem"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Maça</h5>
+                  <p class="card-text">Deliciosa maça</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">R$ 5,00 kg</li>
+                </ul>
+                <ul class="list-group list-group-flush"></ul>
+
+                <div class="card-body">
+                  <a href="#" class="card-link">Adicionar ao carrinho</a>
+                </div>
+                <!-- fim do card -->
+              </div>
+              <!-- produto 3   -->
+              <div class="card card-rvb altura-rvb">
+                <img
+                  class="card-img-top altura-rvb"
+                  src="imgs\maca.jpg"
+                  alt="maça"
+                  style="height: 15rem"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Maça</h5>
+                  <p class="card-text">Deliciosa maça</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">R$ 5,00 kg</li>
+                </ul>
+                <ul class="list-group list-group-flush"></ul>
+
+                <div class="card-body">
+                  <a href="#" class="card-link">Adicionar ao carrinho</a>
+                </div>
+                <!-- fim do card -->
+              </div>
 
               <!-- fim da linha -->
             </div>
@@ -132,5 +244,42 @@
         </div>
       </div>
     </main>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">...</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
