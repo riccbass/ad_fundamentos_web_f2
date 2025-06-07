@@ -28,6 +28,24 @@
 
       .altura-rvb {
         width: 17rem;
+        height: 17rem;
+      }
+
+      .imagem-servico {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+      }
+
+      .imagem-servico img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      .area {
+        margin-bottom: 2rem;
       }
     </style>
 
@@ -50,19 +68,14 @@
   </head>
   <body>
     <!-- para ficar "grudado", o navbar tem que ficar fora do header -->
-    <nav
-      class="navbar sticky-top navbar-expand-lg navbar-light"
-      style="background-color: #e3f2fd"
-    >
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: #e3f2fd">
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
             <a class="nav-link" href="/ad_fundamentos_web">Página inicial</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/ad_fundamentos_web/historia">
-              Conheça a nossa <strong>história</strong>
-            </a>
+            <a class="nav-link" href="/ad_fundamentos_web/historia"> Conheça a nossa <strong>história</strong> </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/ad_fundamentos_web/midia">
@@ -73,16 +86,11 @@
           <li class="nav-item">
             <a class="nav-link" href="/ad_fundamentos_web/sobre">Sobre</a>
           </li>
-          <!-- Button trigger modal -->
         </ul>
-        <button
-          type="button"
-          class="btn btn-primary"
-          data-toggle="modal"
-          data-target="#modal_cliente"
-        >
-          Cadastro
-        </button>
+        <div>
+          <!-- deixo em div pq se precisar de mais um botão já fica grudadinho -->
+          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal_cliente">Cadastro</button>
+        </div>
       </div>
     </nav>
 
@@ -90,20 +98,26 @@
 
     <hr />
     <main>
-      <div id="produtos">
+      <!-- se não colocar os paddings no div do jumbotron vai ficar muito grande  -->
+      <div class="jumbotron jumbotron-fluid" style="padding-top: 0.5rem; padding-bottom: 0.5rem">
+        <div class="container">
+          <h4 class="display-4" style="font-size: 2rem">Black Friday</h4>
+          <p id="contador" class="lead"></p>
+        </div>
+      </div>
+
+      <!-- produtos -->
+      <div class="area" id="produtos">
         <h3 class="titulo">Produtos</h3>
+
+        <!-- hortifruti  -->
         <div id="hortifruti" class="categoria-rvb">
           <h4>Frutas e Verduras</h4>
           <div class="container-fluid">
             <div class="row">
               <!-- produto 1   -->
-              <div class="card card-rvb altura-rvb">
-                <img
-                  class="card-img-top altura-rvb"
-                  src="imgs\maca.jpg"
-                  alt="maça"
-                  style="height: 15rem"
-                />
+              <div class="card card-rvb">
+                <div class="altura-rvb"><img class="card-img-top" src="imgs\maca.jpg" alt="maça" /></div>
                 <div class="card-body">
                   <h5 class="card-title">Maça</h5>
                   <p class="card-text">Deliciosa maça</p>
@@ -119,19 +133,14 @@
                 <!-- fim do card -->
               </div>
               <!-- produto 2   -->
-              <div class="card card-rvb altura-rvb">
-                <img
-                  class="card-img-top altura-rvb"
-                  src="imgs\maca.jpg"
-                  alt="maça"
-                  style="height: 15rem"
-                />
+              <div class="card card-rvb">
+                <div class="altura-rvb"><img class="card-img-top" src="imgs\kiwi.jpeg" alt="kiwi" /></div>
                 <div class="card-body">
-                  <h5 class="card-title">Maça</h5>
-                  <p class="card-text">Deliciosa maça</p>
+                  <h5 class="card-title">Kiwi</h5>
+                  <p class="card-text">Delicioso Kiwi</p>
                 </div>
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">R$ 5,00 kg</li>
+                  <li class="list-group-item">R$ 6,00 kg</li>
                 </ul>
                 <ul class="list-group list-group-flush"></ul>
 
@@ -141,13 +150,8 @@
                 <!-- fim do card -->
               </div>
               <!-- produto 3   -->
-              <div class="card card-rvb altura-rvb">
-                <img
-                  class="card-img-top altura-rvb"
-                  src="imgs\maca.jpg"
-                  alt="maça"
-                  style="height: 15rem"
-                />
+              <div class="card card-rvb">
+                <div class="altura-rvb"><img class="card-img-top" src="imgs\uva.jpeg" alt="uva" /></div>
                 <div class="card-body">
                   <h5 class="card-title">Maça</h5>
                   <p class="card-text">Deliciosa maça</p>
@@ -167,18 +171,15 @@
             </div>
           </div>
         </div>
+
+        <!-- limpeza  -->
         <div id="limpeza" class="categoria-rvb">
           <h4>Limpeza</h4>
           <div class="container-fluid">
             <div class="row">
               <!-- produto 1   -->
-              <div class="card card-rvb altura-rvb">
-                <img
-                  class="card-img-top altura-rvb"
-                  src="imgs\maca.jpg"
-                  alt="maça"
-                  style="height: 15rem"
-                />
+              <div class="card card-rvb">
+                <div class="altura-rvb"><img class="card-img-top" src="imgs\maca.jpg" alt="maça" /></div>
                 <div class="card-body">
                   <h5 class="card-title">Maça</h5>
                   <p class="card-text">Deliciosa maça</p>
@@ -194,19 +195,14 @@
                 <!-- fim do card -->
               </div>
               <!-- produto 2   -->
-              <div class="card card-rvb altura-rvb">
-                <img
-                  class="card-img-top altura-rvb"
-                  src="imgs\maca.jpg"
-                  alt="maça"
-                  style="height: 15rem"
-                />
+              <div class="card card-rvb">
+                <div class="altura-rvb"><img class="card-img-top" src="imgs\kiwi.jpeg" alt="kiwi" /></div>
                 <div class="card-body">
-                  <h5 class="card-title">Maça</h5>
-                  <p class="card-text">Deliciosa maça</p>
+                  <h5 class="card-title">Kiwi</h5>
+                  <p class="card-text">Delicioso Kiwi</p>
                 </div>
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">R$ 5,00 kg</li>
+                  <li class="list-group-item">R$ 6,00 kg</li>
                 </ul>
                 <ul class="list-group list-group-flush"></ul>
 
@@ -216,13 +212,8 @@
                 <!-- fim do card -->
               </div>
               <!-- produto 3   -->
-              <div class="card card-rvb altura-rvb">
-                <img
-                  class="card-img-top altura-rvb"
-                  src="imgs\maca.jpg"
-                  alt="maça"
-                  style="height: 15rem"
-                />
+              <div class="card card-rvb">
+                <div class="altura-rvb"><img class="card-img-top" src="imgs\uva.jpeg" alt="uva" /></div>
                 <div class="card-body">
                   <h5 class="card-title">Maça</h5>
                   <p class="card-text">Deliciosa maça</p>
@@ -243,17 +234,46 @@
           </div>
         </div>
       </div>
+
+      <div class="area d-flex flex-column align-items-center" id="serviços">
+        <h3 class="titulo text-center">Serviços</h3>
+
+        <div style="margin-top: 2rem" ; class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-sm-3">
+              <div class="card card-rvb">
+                <div class="imagem-servico">
+                  <img class="card-img-top w-100 h-100" src="imgs/retirada.jpeg" alt="Card image cap" style="object-fit: cover" />
+                </div>
+
+                <div class="card-body">
+                  <h5 class="card-title">Retirada</h5>
+                  <p class="card-text">Gratuito</p>
+                  <button onclick="servico('Retirada')" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_entrega">Retirada</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-3">
+              <div class="card">
+                <div class="imagem-servico">
+                  <img class="card-img-top w-100 h-100" src="imgs/entrega.jpeg" alt="Card image cap" style="object-fit: cover" />
+                </div>
+
+                <div class="card-body">
+                  <h5 class="card-title">Entrega</h5>
+                  <p class="card-text">R$5,00 a cada 10 KM</p>
+                  <button onclick="servico('Entrega')" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_entrega">Entrega</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="modal_cliente"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
+    <!-- Modal do Cadastro -->
+    <div class="modal fade" id="modal_cliente" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -275,43 +295,20 @@
                 <!-- o que faz o tamanho aqui é o 6 colunas -->
                 <div class="form-group col-md-6">
                   <label for="nome">Nome</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="nome"
-                    name="nome"
-                    placeholder="Digite o seu nome"
-                    required
-                  />
+                  <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite o seu nome" required />
                 </div>
                 <div class="form-group col-md-6">
                   <label for="cpf">CPF</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="cpf"
-                    placeholder="Digite o seu CPF"
-                    required
-                  />
+                  <input type="text" class="form-control" id="cpf" placeholder="Digite o seu CPF" required />
                 </div>
               </div>
               <div class="form-group">
                 <label for="endereco1">Endereço 1</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="endereco1"
-                  placeholder="Endereço 1..."
-                />
+                <input type="text" class="form-control" id="endereco1" placeholder="Endereço 1..." />
               </div>
               <div class="form-group">
                 <label for="endereco2">Endereço 2</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="endereco2"
-                  placeholder="Endereço 2..."
-                />
+                <input type="text" class="form-control" id="endereco2" placeholder="Endereço 2..." />
               </div>
               <div class="form-row">
                 <div class="form-group col-md-4">
@@ -319,70 +316,34 @@
 
                   <div class="form-check form-check-inline">
                     <!-- ter o mesmo nome é o que impede de escolher mais de um ao mesmo tempo -->
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      id="masculino"
-                      value="option1"
-                      name="sexo"
-                    />
+                    <input class="form-check-input" type="radio" id="masculino" value="option1" name="sexo" />
                     <label class="form-check-label" for="masculino">M</label>
                   </div>
                   <div class="form-check form-check-inline">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      id="feminino"
-                      value="option2"
-                      name="sexo"
-                    />
+                    <input class="form-check-input" type="radio" id="feminino" value="option2" name="sexo" />
                     <label class="form-check-label" for="feminino">F</label>
                   </div>
                 </div>
                 <div class="form-group col-md-6">
                   <label for="tel">Telefone</label>
-                  <input
-                    type="tel"
-                    class="form-control"
-                    id="tel"
-                    placeholder="(XX) XXXX-XXXX"
-                    required
-                  />
+                  <input type="tel" class="form-control" id="tel" placeholder="(XX) XXXX-XXXX" required />
                 </div>
               </div>
               <div class="form-group">
                 <label for="email">Email</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  placeholder="email@provedor.com"
-                />
+                <input type="email" class="form-control" id="email" placeholder="email@provedor.com" />
               </div>
 
               <div class="form-row">
                 <div class="form-group col-md-4">
                   <label for="familia">Tamanho família</label>
 
-                  <input
-                    type="number"
-                    id="familia"
-                    name="familia"
-                    min="1"
-                    max="100"
-                    value="2"
-                  />
+                  <input type="number" id="familia" name="familia" min="1" max="100" value="2" />
                 </div>
                 <div class="form-group col-md-6">
                   <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      id="gridCheck"
-                    />
-                    <label class="form-check-label" for="gridCheck">
-                      Desejo receber ofertas
-                    </label>
+                    <input class="form-check-input" type="checkbox" id="gridCheck" />
+                    <label class="form-check-label" for="gridCheck"> Desejo receber ofertas </label>
                   </div>
                 </div>
               </div>
@@ -391,6 +352,31 @@
                 <!-- se eu colocar o data-dismiss aqui não vai funcionar a validação, tem que ser por js -->
                 Cadastrar
               </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal da Entrega -->
+    <div class="modal fade" id="modal_entrega" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="servico">Cadastro Cliente</h5>
+          </div>
+
+          <div class="modal-body">
+            <form id="entrega">
+              <div class="form-row">
+                <!-- ter o valor escondido apra posterimente passar para o backend -->
+                <input type="hidden" class="form-control" id="tipo_servico" name="servico" />
+                <!-- o que faz o tamanho aqui é o 6 colunas -->
+                <div class="form-group col-md-6">
+                  <label for="data_entrega">Data e hora:</label>
+                  <input type="datetime-local" id="data_entrega" name="data_entrega" />
+                </div>
+              </div>
             </form>
           </div>
         </div>
@@ -412,6 +398,60 @@
 
         //envia para o backend
       });
+
+      function servico(servico) {
+        document.getElementById("servico").innerHTML = servico;
+        document.getElementById("tipo_servico").value = servico;
+      }
+
+      //função para preencher o horário atual na data de entrega/retirada
+
+      function toLocalISOString(date) {
+        const localDate = new Date(date - date.getTimezoneOffset() * 60000); //offset in milliseconds. Credit https://stackoverflow.com/questions/10830357/javascript-toisostring-ignores-timezone-offset
+
+        localDate.setHours(localDate.getHours() + 2);
+
+        // Optionally remove second/millisecond if needed
+        localDate.setSeconds(null);
+        localDate.setMilliseconds(null);
+        return localDate.toISOString().slice(0, -1);
+      }
+
+      //isso faz com que ao carregar já preencha
+      window.addEventListener("load", () => {
+        document.getElementById("data_entrega").value = toLocalISOString(new Date());
+      });
+
+      //timer
+
+      function contagem(dataAlvo) {
+        //hora alvo em milisegundos
+        var horaBlackFriday = dataAlvo.getTime();
+        //hora atual em milisegundos
+        var horaAtual = new Date().getTime();
+
+        var distancia = horaBlackFriday - horaAtual;
+
+        if (distancia < 0) {
+          return "Já passo!";
+        }
+
+        var dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+        var horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+        var segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+
+        return `Faltam apenas ${dias}d ${horas}h ${minutos}m ${segundos}s para a Black-Friday`;
+      }
+
+      function contagemBlackFriday() {
+        var blackFriday = new Date("2025-11-28");
+        var texto = contagem(blackFriday);
+
+        document.getElementById("contador").innerHTML = texto;
+      }
+
+      setInterval(contagemBlackFriday, 500);
     </script>
   </body>
 </html>
