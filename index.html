@@ -55,7 +55,7 @@
       style="background-color: #e3f2fd"
     >
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav mr-auto">
           <li class="nav-item">
             <a class="nav-link" href="/ad_fundamentos_web">Página inicial</a>
           </li>
@@ -74,15 +74,15 @@
             <a class="nav-link" href="/ad_fundamentos_web/sobre">Sobre</a>
           </li>
           <!-- Button trigger modal -->
-          <button
-            type="button"
-            class="btn btn-primary"
-            data-toggle="modal"
-            data-target="#exampleModal"
-          >
-            Launch demo modal
-          </button>
         </ul>
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-toggle="modal"
+          data-target="#modal_cliente"
+        >
+          Cadastro
+        </button>
       </div>
     </nav>
 
@@ -248,7 +248,7 @@
     <!-- Modal -->
     <div
       class="modal fade"
-      id="exampleModal"
+      id="modal_cliente"
       tabindex="-1"
       role="dialog"
       aria-labelledby="exampleModalLabel"
@@ -257,29 +257,161 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
+            <h5 class="modal-title" id="exampleModalLabel">Cadastro Cliente</h5>
           </div>
-          <div class="modal-body">...</div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+
+          <!-- 
+            Formulário de cadastro do cliente:
+            Elabore um formulário contendo os dados de identificação do cliente,
+            tais como: nome (ok), endereço (ok), CPF (ok), sexo (ok), telefone (ok), e-mail (ok), etc.
+            Utilize elementos variados no formulário e atributos, como: input (ok), checkbox, number, e-mail (ok), radio button (ok), 
+            placeholder (ok), campos obrigatórios (ok), etc.
+            Obs.: Para desenvolver esta parte, consulte a Aula 6.
+          -->
+
+          <div class="modal-body">
+            <form id="cadastro_cliente">
+              <div class="form-row">
+                <!-- o que faz o tamanho aqui é o 6 colunas -->
+                <div class="form-group col-md-6">
+                  <label for="nome">Nome</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nome"
+                    name="nome"
+                    placeholder="Digite o seu nome"
+                    required
+                  />
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="cpf">CPF</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="cpf"
+                    placeholder="Digite o seu CPF"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="endereco1">Endereço 1</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="endereco1"
+                  placeholder="Endereço 1..."
+                />
+              </div>
+              <div class="form-group">
+                <label for="endereco2">Endereço 2</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="endereco2"
+                  placeholder="Endereço 2..."
+                />
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-4">
+                  <label>Escolha o sexo</label>
+
+                  <div class="form-check form-check-inline">
+                    <!-- ter o mesmo nome é o que impede de escolher mais de um ao mesmo tempo -->
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      id="masculino"
+                      value="option1"
+                      name="sexo"
+                    />
+                    <label class="form-check-label" for="masculino">M</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      id="feminino"
+                      value="option2"
+                      name="sexo"
+                    />
+                    <label class="form-check-label" for="feminino">F</label>
+                  </div>
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="tel">Telefone</label>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="tel"
+                    placeholder="(XX) XXXX-XXXX"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="email@provedor.com"
+                />
+              </div>
+
+              <div class="form-row">
+                <div class="form-group col-md-4">
+                  <label for="familia">Tamanho família</label>
+
+                  <input
+                    type="number"
+                    id="familia"
+                    name="familia"
+                    min="1"
+                    max="100"
+                    value="2"
+                  />
+                </div>
+                <div class="form-group col-md-6">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="gridCheck"
+                    />
+                    <label class="form-check-label" for="gridCheck">
+                      Desejo receber ofertas
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-success">
+                <!-- se eu colocar o data-dismiss aqui não vai funcionar a validação, tem que ser por js -->
+                Cadastrar
+              </button>
+            </form>
           </div>
         </div>
       </div>
     </div>
+
+    <script>
+      //ele precisa estar aembaixo para pegar os elementos do html, se for carregado antes o script n pega
+      const form = document.getElementById("cadastro_cliente");
+
+      form.addEventListener("submit", function (e) {
+        const modalEl = document.getElementById("modal_cliente");
+        $(modalEl).modal("hide");
+
+        alert("Cadastro concluído");
+
+        e.preventDefault();
+        e.stopPropagation();
+
+        //envia para o backend
+      });
+    </script>
   </body>
 </html>
