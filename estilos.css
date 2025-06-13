@@ -1,0 +1,64 @@
+.titulo {
+  margin-left: 1rem;
+}
+
+.categoria-rvb {
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.card-rvb {
+  margin-right: 1rem;
+}
+
+.navbar-rbv {
+  background-color: #e3f2fd;
+}
+
+.margem-rvb {
+  margin-top: 2rem;
+}
+
+.jumbo-rvb {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.jumbo-rvb h4 {
+  font-size: 2rem;
+}
+
+.altura-rvb {
+  width: 17rem;
+  height: 17rem;
+}
+
+.imagem-servico {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.imagem-servico img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.imagem-carrousel {
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.imagem-servico {
+  object-fit: cover;
+}
+
+.area {
+  margin-bottom: 2rem;
+}
+
+.upper-case {
+  text-transform: uppercase;
+}
