@@ -1,7 +1,6 @@
-//ele precisa estar aembaixo para pegar os elementos do html, se for carregado antes o script n pega
-const form = document.getElementById("cadastro_cliente");
+const formCliente = document.getElementById("form-cliente");
 
-form.addEventListener("submit", function (e) {
+formCliente.addEventListener("submit", function (e) {
   const modalEl = document.getElementById("modal_cliente");
   $(modalEl).modal("hide");
 
@@ -11,6 +10,26 @@ form.addEventListener("submit", function (e) {
   e.stopPropagation();
 
   //envia para o backend
+});
+
+const formServico = document.getElementById("form-servico");
+
+formServico.addEventListener("submit", function (e) {
+  const modalEl = document.getElementById("modal_servico");
+  $(modalEl).modal("hide");
+
+  const tipoServico = modalEl.querySelector("#tipo_servico").value;
+  const dataServico = modalEl.querySelector("#data_entrega").value;
+
+  const dataServicoVisivel = new Date(dataServico).toLocaleString();
+
+  const texto = `${tipoServico} | ${dataServicoVisivel}`;
+
+  //vai mostrar na tela o serviço escolhiod
+  document.getElementById("info-servico").innerHTML = texto;
+
+  e.preventDefault();
+  e.stopPropagation();
 });
 
 function servico(servico) {
