@@ -33,6 +33,9 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- para os ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
     <script src="script.js" defer></script>
   </head>
 
@@ -327,6 +330,7 @@
             </div>
 
             <!-- carrosel -->
+            <!-- o carrosel do bootrap já troca sozinho -->
             <div class="col-sm-4">
               <h3 class="titulo text-center">Nossas Lojas</h3>
               <div style="margin-bottom: 2rem" ; class="container-fluid margem-rvb">
@@ -486,27 +490,39 @@
     </div>
 
     <footer>
-      <nav class="navbar sticky-top navbar-expand-lg navbar-light navbar-rbv">
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#produtos">Produtos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#servicos">Serviços</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="mailto:mercado@esquina.com?subject=Contato">Contato</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/ad_fundamentos_web_f2/faq"
-                ><abbr title="Perguntas frequentes"><span lang="“eng-us”">Frequently asked questions</span></abbr></a
-              >
-            </li>
-          </ul>
+      <!-- realisticamede, não vejo muita fantagem usar com o navbar -->
+      <div class="container-fluid footer-rvb">
+        <div class="row">
+          <div class="col-md-3 mb-3 mt-2 ml-5">
+            <h6>Contato</h6>
+            <p><i class="fas fa-map-marker-alt"></i> Rua Bonita, 331 - Porto Alegre - RS</p>
+            <p><i class="fas fa-phone-alt"></i> (51) 3268-3572</p>
+            <h6>Horário</h6>
+            <p><i class="fas fa-clock"></i> Seg a Sáb: 08h às 20h</p>
+          </div>
+          <div class="col-md-3 mt-2 mb-3">
+            <h6>Links internos</h6>
+            <!-- com esse div quebra eles -->
+            <div class="d-flex flex-column">
+              <!-- dentro do p fica mais espaçado -->
+              <p><a href="#produtos">Produtos</a></p>
+              <p><a href="#servicos">Serviços</a></p>
+              <p>
+                <a href="/ad_fundamentos_web_f2/faq"><span lang="“eng-us”">Frequently asked questions</span></a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3 mt-2">
+            <h6>Redes sociais</h6>
+            <!-- aqui fica melhor se ficar lado a lado -->
+            <a href="https://facebook.com" class="text-dark mr-3"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com" class="text-dark mr-3"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/5511999999999" class="text-dark"><i class="fab fa-whatsapp"></i></a>
+          </div>
+          <!-- fim da row -->
         </div>
-        <span class="navbar-text"> Feito por Ricardo Bassanesi</span>
-      </nav>
+        <!-- fim do container -->
+      </div>
     </footer>
   </body>
 </html>
