@@ -545,6 +545,33 @@
       </div>
     </div>
 
+    <!-- Modal de adicionar ao carrinho -->
+    <div class="modal fade" id="modal_carrinho" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="servico">Cadastro Cliente</h5>
+          </div>
+
+          <div class="modal-body">
+            <form id="form-carrinho">
+              <div class="form-row">
+                <!-- o que faz o tamanho aqui é o 6 colunas -->
+                <div class="form-group col-md-6">
+                  <label for="data_entrega">Data e hora:</label>
+                  <input type="datetime-local" id="data_entrega" name="data_entrega" />
+                </div>
+              </div>
+              <button type="submit" class="btn btn-success">
+                <!-- se eu colocar o data-dismiss aqui não vai funcionar a validação, tem que ser por js -->
+                Escolher
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <footer>
       <!-- realisticamede, não vejo muita fantagem usar com o navbar -->
       <div class="container-fluid footer-rvb">

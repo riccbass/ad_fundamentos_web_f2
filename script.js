@@ -1,3 +1,21 @@
+//adiciona o listener para cada produto pela classe
+
+const links = document.querySelectorAll(".card-link");
+
+links.forEach(function (link) {
+  //para cada link com essa classse, adicione o listener
+  link.addEventListener("click", function (e) {
+    e.preventDefault(); //previne a ação padrão, iria para cima
+
+    //pega o pai
+    const card = e.currentTarget.closest(".card-rvb");
+    //pega o filho com o nome
+    const titulo = card.querySelector(".card-body h5");
+
+    console.log("Você clicou em:", titulo.textContent);
+  });
+});
+
 const formCliente = document.getElementById("form-cliente");
 
 formCliente.addEventListener("submit", function (e) {
