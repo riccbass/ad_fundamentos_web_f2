@@ -1,6 +1,6 @@
 //adiciona o listener para cada produto pela classe
 
-const links = document.querySelectorAll(".card-link");
+const links = document.querySelectorAll(".carrinho-rvb");
 
 links.forEach(function (link) {
   //para cada link com essa classse, adicione o listener
@@ -14,6 +14,20 @@ links.forEach(function (link) {
 
     console.log("Você clicou em:", titulo.textContent);
   });
+});
+
+const formCarrinho = document.getElementById("form-carrinho");
+
+formCarrinho.addEventListener("submit", function (e) {
+  const modalEl = document.getElementById("modal_carrinho");
+  $(modalEl).modal("hide");
+
+  alert("Produto adicionado!");
+
+  e.preventDefault();
+  e.stopPropagation();
+
+  //envia para o backend
 });
 
 const formCliente = document.getElementById("form-cliente");
