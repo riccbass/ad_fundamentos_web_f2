@@ -9,6 +9,8 @@
 
 .card-rvb {
   margin-right: 1rem;
+  /* essa parte quebra eles certinho */
+  margin-top: 2rem;
 }
 
 .navbar-rbv {
