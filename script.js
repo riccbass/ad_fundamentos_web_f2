@@ -11,8 +11,14 @@ links.forEach(function (link) {
     const card = e.currentTarget.closest(".card-rvb");
     //pega o filho com o nome
     const titulo = card.querySelector(".card-body h5");
+    //pega imagem
+    const imagem = card.querySelector(".altura-rvb img");
 
-    console.log("Você clicou em:", titulo.textContent);
+    const imgDestino = document.getElementById("prod-cart");
+
+    imgDestino.src = imagem.src;
+
+    console.log("Você clicou em:", imgDestino);
   });
 });
 
