@@ -2,6 +2,9 @@
 
 const links = document.querySelectorAll(".carrinho-rvb");
 
+var qtdPedidos = 0;
+var pedidos = [];
+
 links.forEach(function (link) {
   //para cada link com essa classse, adicione o listener
   link.addEventListener("click", function (e) {
@@ -17,21 +20,27 @@ links.forEach(function (link) {
     const imgDestino = document.getElementById("prod-cart");
 
     imgDestino.src = imagem.src;
-
-    console.log("Você clicou em:", imgDestino);
   });
 });
 
 const formCarrinho = document.getElementById("form-carrinho");
 
 formCarrinho.addEventListener("submit", function (e) {
-  const modalEl = document.getElementById("modal_carrinho");
-  $(modalEl).modal("hide");
-
-  alert("Produto adicionado!");
-
   e.preventDefault();
   e.stopPropagation();
+
+  const modalEl = document.getElementById("modal_carrinho");
+
+  // alert("Produto adicionado!");
+  $(modalEl).modal("hide");
+
+  //adiciona o pedido //
+
+  qtdPedidos++;
+
+  document.getElementById("qtd-pedidos").innerHTML = qtdPedidos;
+
+  pedidos;
 
   //envia para o backend
 });
